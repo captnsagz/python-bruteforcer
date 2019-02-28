@@ -37,15 +37,22 @@ while exit==0:
 
 
     if choice==1:
-        path = input("ENTER FILE PATH:")
+        path = input("ENTER FILE PATH:")#file path for d directory you want to access
+        #listing the files in the directory 
         for filename in os.listdir(path):
+            #opening the file that is being listed
             f2 = open(filename, 'r')
+            #breakind down the file into a list for string comparison
             for line in f2:
                 if "GOOD" in line.split():
+                    #calling the print_func() to print content of the file
                     print_func(filename)
+                    #writing the good speakers into a file called GOOD_SPOEAKERS 
                     f3 = open('GOOD_SPEAKERS.txt', 'a')
+                    #Cconcatenating spaeker is good with the name of the file that is being traversed
                     f3.write("\nSPEAKER IS GOOD:" + filename)
                     f3.close()
+                  #breaking out of the loop if conditoned has been satisfied to avoid repetition of files in output file   
                 break;
     if choice==2:
         path = input("ENTER FILE PATH:")
