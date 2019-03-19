@@ -41,12 +41,13 @@ while exit==0:
         #listing the files in the directory 
         for filename in os.listdir(path):
             #opening the file that is being listed
-            f2 = open(filename, 'r')
+            file = path + "\\" + str(filename)
+            f2 = open(file, 'r')
             #breakind down the file into a list for string comparison
             for line in f2:
                 if "GOOD" in line.split():
                     #calling the print_func() to print content of the file
-                    print_func(filename)
+                    print_func(file)
                     #writing the good speakers into a file called GOOD_SPOEAKERS 
                     f3 = open('GOOD_SPEAKERS.txt', 'a')
                     #Cconcatenating spaeker is good with the name of the file that is being traversed
@@ -57,10 +58,11 @@ while exit==0:
     if choice==2:
         path = input("ENTER FILE PATH:")
         for filename in os.listdir(path):
-            f2 = open(filename, 'r')
+            file = path + "\\" + str(filename)
+            f2 = open(file, 'r')
             for line in f2:
                 if "BAD" in line.split():
-                    print_func(filename)
+                    print_func(file)
                     f4 = open('BAD_SPEAKERS.txt', 'a')
                     f4.write("\nSPEAKER IS NOT GOOD:" + filename)
                     f4.close()
@@ -69,11 +71,12 @@ while exit==0:
         path = input("ENTER FILE PATH:")
         serial=input("ENTER SERIAL NUMBER OF SPEAKER:")
         for filename in os.listdir(path):
-            f2 = open(filename, 'r')
+            file = path + "\\" + str(filename)
+            f2 = open(file, 'r')
             for line in f2:
                 if serial in line.split():
                     print("SPEAKER FILE:" + filename)
-                    print_func(filename)
+                    print_func(file)
                     f5 = open('OUTPUT4_SPEAKERS.txt', 'a')
                     f5.write("\nSPEAKER FILE NAME:" + filename)
                     f5.close()
@@ -82,11 +85,12 @@ while exit==0:
         path = input("ENTER FILE PATH:")
         date=input("ENTER DATE TO SEARCH:")
         for filename in os.listdir(path):
-            f2 = open(filename, 'r')
+            file = path + "\\" + str(filename)
+            f2 = open(file, 'r')
             for line in f2:
                 if date in line.split():
                     print("SPEAKER FILE:"+ filename+" WITH DATE :"+date)
-                    print_func(filename)
+                    print_func(file)
                     f6 = open('OUTPUT5_SPEAKERS.txt', 'a')
                     f6.write("\nSPEAKER FILE NAME:" + filename)
                     f6.close()
