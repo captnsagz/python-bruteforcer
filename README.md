@@ -1,5 +1,4 @@
-# holoplot_project
-a python program that iterates through a folder and gives output in accordance to the given input
-you initialize a file path when prompted to give a file path.Give full file path and the program should be within said folder.
-THIS PROGRAM/CODE IS STRICTLY FOR LEARNING AND INNOVATIVE PURPOSES!!!
-THANK YOU FOR YOUR UNDERSTANDING AND CONTRIBUTION ;)
+#pyhton_bruteforcer
+A python script that helps in bruteforcing a pin login page something like sniper attack in burp suite sor a single field input but can be modified to for use like a buttering ram attack in burp suite
+this script is strictly for learning purpose and should not be used for any illegal purpose as u might be caught and jailed for it so use it at your owwn risk
+thank you for your understanding.
